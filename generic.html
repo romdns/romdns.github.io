@@ -1,0 +1,262 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>iiot-rasnet</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo" ><strong><h2>Robust Intrusion Detection for Industrial IoT</h2></strong></a>
+								
+									
+								</header>
+
+							<!-- Banner -->
+								<section id="banner">
+									<div class="content">
+										<header>
+											<h2>Introduce</h2>
+											<!-- <p>ZhiLiang Bu, Chunlei Zhao, Liangyi Gong, Yan Wang, Yi Yang and Xi Wang</p> -->
+										</header>
+										<p style="word-break:break-all;text-indent:2em;margin: 0;margin-bottom: 3px; " >Due to the significant role of Industrial Internet of Things (IIoT) in industrial systems, it often faces numerous network attacks. Therefore, intrusion detection systems are crucial for protecting real-world IIoT and driving network security solutions. However, current rule-based and machine learning-based IIoT intrusion detection systems suffer from low robustness when facing complex and dynamic network attacks. </p>
+											<p style="word-break:break-all;text-indent:2em;margin: 0;margin-bottom: 3px; " >To address these challenges, this paper proposes a novel intrusion detection model named RASNet (Residual Attention Self-learning Network), based on deep reinforcement learning. The model effectively tackles issues like gradient vanishing and exploding by introducing residual networks, thereby enhancing the representation ability for complex attack features. Additionally, the model incorporates multiple layers of attention mechanisms into convolutional neural networks, improving the feature extraction capability of convolutional blocks and capturing key information. By dynamically adjusting the weights of feature maps, the model highlights crucial information related to malicious attacks, promoting accurate classification. To handle the issues of imbalanced attack samples and adaptability to various attack types, the model introduces a self-learning mechanism. This mechanism dynamically adjusts to different data distributions and attack types, enhancing the model's adaptability and generalization capability. Through the backpropagation algorithm, the model dynamically adjusts the weights of different attack types, thereby improving the accuracy and robustness of malicious attack detection. This self-learning mechanism enables the model to accurately detect malicious attacks in the Industrial Internet of Things and enhance its robustness and reliability in various attack scenarios.</p>
+												<p style="word-break:break-all;text-indent:2em;margin: 0;margin-bottom: 10px; " >Experimental evaluations are conducted on the publicly available dataset Edge-IIoTset, which contains 14 types of attacks for comparison with control group models. The results demonstrate significant improvements in classification accuracy achieved by our proposed model, with an accuracy of 94.97% for 15-class classification. These results validate the effectiveness and robustness of our model compared to existing machine learning-based models in terms of classification performance and accuracy.</p>
+										<ul>
+											<li>The figure on the right is a block diagram of IIoT intrusion detection</li>
+										</ul>
+										
+										<!-- <ul class="actions">
+											<li><a href="#" class="button big">Learn More</a></li>
+										</ul> -->
+									</div>
+
+									 <span  class="image object">
+								
+									 	<img style="width: 130%;margin-top: 40%;margin-left: -10%;"  src="images/model.png"   />
+											
+									 	
+										
+								 
+										
+									 </span>
+
+								</section>
+
+							<!-- Section -->
+								<section >
+									<header class="major">
+										<h2 id= "buzhi">
+										Dataset
+										</h2>
+									</header>
+									<div>
+										<h3>Traffic Collection</h3>
+										<img style="margin: auto;display: block;height: 45%;width: 50%;"  src="images/centre.jpg"   />
+										<div style="margin-top:2%;text-align: center;"><strong>
+											The figure above illustrates the data collection process of this dataset.</strong></div>
+									</div>
+									<h3>Traffic Analysis</h3>
+									<div class="features">
+										
+										<article>
+										
+											<svg class="icon" aria-hidden="true" style="width: 20%;">
+  										<use xlink:href="#icon-zhengchang"></use>
+											</svg>
+												
+											
+											<div class="content">
+												<h3>Normal</h3>
+												<p>The dataset contains 1,363,998 Normal IIoT traffic logging</p>
+											</div>
+										</article>
+										<article>
+										
+										<svg class="icon" aria-hidden="true" style="width: 20%;">
+  										<use xlink:href="#icon-youfengxian"></use>
+											</svg>
+											
+											<div class="content">
+												<h3>Malicious attack</h3>
+												<p>The dataset contains 545,673 attack traffic records</p>
+											</div>
+											
+										</article>
+										<div>
+											<p style="margin-left: 5%;">The detailed information is as follows:</p>
+											<table style="overflow-x: auto;text-align: center;margin-left: 5%;">
+												<tr>
+													<th>Class</th>
+													<td>Normal</td>
+													<td>UDP</td>
+													<td>ICMP</td>
+													<td>SQL</td>
+													<td>DDoS</td>
+													<td>Scan</td>
+													<td>Pwd</td>
+													<td>HTTP</td>
+													<td>Upload</td>
+													<td>Back</td>
+													<td>Port</td>
+													<td>XSS</td>
+													<td>Rans</td>
+													<td>Fing</td>
+													<td>MITM</td>
+												</tr>
+												<tr>
+													<th>Records</th>
+													<td>1363998</td>
+													<td>121567</td>
+													<td>67939</td>
+													<td>50826</td>
+													<td>50062</td>
+													<td>50026</td>
+													<td>49933</td>
+													<td>48544</td>
+													<td>36807</td>
+													<td>24026</td>
+													<td>19977</td>
+													<td>15066</td>
+													<td>9689</td>
+													<td>853</td>
+													<td>358</td>
+												</tr>
+												<tr>
+													<th>Percentage</th>
+													<td>71.42%</td>
+													<td>6.36%</td>
+													<td>3.56%</td>
+													<td>2.26%</td>
+													<td>2.62%</td>
+													<td>2.61%</td>
+													<td>2.61%</td>
+													<td>2.54%</td>
+													<td>1.92%</td>
+													<td>1.26%</td>
+													<td>1.05%</td>
+													<td>0.79%</td>
+													<td>0.51%</td>
+													<td>0.04%</td>
+													<td>0.02%</td>
+												</tr>
+											</table>
+
+		                            	</div>
+									</div><strong>
+									<ul>
+										<li><p>The public dataset download address: <a href="https://www.kaggle.com/mohamedamineferrag/edgeiiotset-cyber-security-dataset-of-iot-iiot" style="color: blue;">Edge-IIoTset Cyber Security Dataset of IoT & IIoT
+											Edge-IIoTset Cyber Security Dataset</a></p></li>
+										<!-- <li><p>Please cite this study when using the data.</p></li> --></strong>
+									</ul>
+									
+								</section>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2 id= "buzhi1">Relevant Codes</h2>
+									</header>
+									<div class="posts">
+
+										
+
+										<article>
+										<ul>
+											<li><strong><p>We achieved exceptionally high accuracy, demonstrating the effectiveness of the model in detecting malicious traffic in Industrial Internet of Things (IIoT) systems. </p></strong></li>
+											<li><strong><p>The figure on the right presents the confusion matrix of our model on this dataset.</p></strong></li>
+										</ul>
+										
+										<ul class="actions">
+												<li><a href="https://github.com/romdns/code.git" target="_blank" class="button">Get</a></li>
+											</ul>
+										</article>
+										<article>
+											<a  class="image"><img src="images/ran.png"/></a>
+										</article>
+										
+									</div>
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+							<p><br\><br\></p>
+
+							<!-- Search -->
+								<!-- <section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form>
+								</section> -->
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="index.html">Homepage</a></li>
+										<li><a href="#buzhi" >Dataset</a></li>
+										<li><a href="#buzhi1">Relevant Codes</a></li>
+									</ul>
+								</nav>
+
+						
+								<section>
+									<header class="major">
+										<h2>Contact</h2>
+									</header>
+									<!-- <p>Sed varius enim lorem ullamcorper dolore aliquam aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin sed aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p> -->
+									<ul class="contact">
+
+										<li class="icon solid fa-envelope"><a href="#">
+											renhuaishuo@163.com
+											<br/>
+											<br/>
+											gongliangyi@gmail.com
+											<br/>
+										</li>
+
+										
+									
+									</ul>
+								</section>
+
+							
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="./iconfont.js"></script>
+
+
+
+	</body>
+</html>
